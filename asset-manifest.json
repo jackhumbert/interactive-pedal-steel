@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/interactive-pedal-steel/static/css/main.195d7185.css",
+    "main.js": "/interactive-pedal-steel/static/js/main.cdc6bee4.js",
+    "static/js/787.64e49576.chunk.js": "/interactive-pedal-steel/static/js/787.64e49576.chunk.js",
+    "index.html": "/interactive-pedal-steel/index.html",
+    "main.195d7185.css.map": "/interactive-pedal-steel/static/css/main.195d7185.css.map",
+    "main.cdc6bee4.js.map": "/interactive-pedal-steel/static/js/main.cdc6bee4.js.map",
+    "787.64e49576.chunk.js.map": "/interactive-pedal-steel/static/js/787.64e49576.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.195d7185.css",
+    "static/js/main.cdc6bee4.js"
+  ]
+}
