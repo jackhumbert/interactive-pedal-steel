@@ -2,16 +2,23 @@ import * as React from 'react';
 import Note, { Sharps } from '../classes/Note'
 import NoteComponent from '../components/NoteComponent'
 
-export class Adjustment {
-    name : string;
-    index : number[];
-    interval : number;
-    constructor(name : string, index : number[], interval : number) {
-      this.name = name;
-      this.index = index;
-      this.interval = interval
-    }
+export class Movement {
+  index: number;
+  interval: number;
+  constructor(movement: Movement) {
+    this.index = movement.index;
+    this.interval = movement.interval;
   }
+}
+
+export class Adjustment {
+  name : string;
+  movements : Movement[];
+  constructor(name : string, movements : Movement[]) {
+    this.name = name;
+    this.movements = movements;
+  }
+}
 
 export class String {
     baseNote: Note;

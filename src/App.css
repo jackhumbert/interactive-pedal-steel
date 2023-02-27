@@ -203,11 +203,15 @@
   width: 133.333%;
 }
 
-.string {
+.string, .fret-labels {
   display: flex;
 }
 
-.string .note {
+.fret-labels {
+  border-bottom: 1px solid black;
+}
+
+.note, .fret-label {
   text-align: left;
   width: 0px;
   /* border-left: 1px black solid; */
@@ -233,7 +237,12 @@
   transition: flex-grow 1s;
 }
 
-.string .note .label {
+.fret-label {
+  height: 40px;
+  flex-direction: column;
+}
+
+.label {
   flex-grow: 0;
   box-sizing: border-box;
   text-align: center;
@@ -244,142 +253,142 @@
   padding-right: 5px;
 }
 
-.string.pedal-1 .note.fret-0,
-.string.pedal-2 .note.fret-1,
-.string.pedal-2 .note.fret-0,
-.string.pedal-4 .note.fret-1,
-.string.pedal-4 .note.fret-0,
-.string.pedal--1 .note.fret-22,
-.string.pedal--2 .note.fret-22,
-.string.pedal--2 .note.fret-23,
-.string .note.fret--2,
-.string .note.fret--1, 
-.string .note.fret-24,
-.string .note.fret-25 {
+.string.pedal-1 .fret-0,
+.string.pedal-2 .fret-1,
+.string.pedal-2 .fret-0,
+.string.pedal-4 .fret-1,
+.string.pedal-4 .fret-0,
+.string.pedal--1 .fret-22,
+.string.pedal--2 .fret-22,
+.string.pedal--2 .fret-23,
+.fret--2,
+.fret--1, 
+.fret-24,
+.fret-25 {
   flex-grow: 0.001;
 }
 
-.string.pedal--2 .note.fret--2 {
+.string.pedal--2 .fret--2 {
   flex-grow: 6.29994975758;
 }
 
-.string.pedal--2 .note.fret--1,
-.string.pedal--1 .note.fret--1 {
+.string.pedal--2 .fret--1,
+.string.pedal--1 .fret--1 {
   flex-grow: 5.94636074737;
 }
 
-.string .note.fret-0 {
+.fret-0 {
   flex-grow: 5.61261716338;
 }
 
-.string .note.fret-1 {
+.fret-1 {
   flex-grow: 5.29760516743;
 }
 
-.string .note.fret-1 {
+.fret-1 {
   flex-grow: 5.29760516743;
 }
 
-.string .note.fret-2 {
+.fret-2 {
   flex-grow: 5.00027343627;
 }
 
-.string .note.fret-3 {
+.fret-3 {
   flex-grow: 4.71962965288;
 }
 
-.string .note.fret-4 {
+.fret-4 {
   flex-grow: 4.45473719472;
 }
 
-.string .note.fret-5 {
+.fret-5 {
   flex-grow: 4.20471200785;
 }
 
-.string .note.fret-6 {
+.fret-6 {
   flex-grow: 3.96871965643;
 }
 
-.string .note.fret-7 {
+.fret-7 {
   flex-grow: 3.74597253794;
 }
 
-.string .note.fret-8 {
+.fret-8 {
   flex-grow: 3.53572725457;
 }
 
-.string .note.fret-9 {
+.fret-9 {
   flex-grow: 3.33728213224;
 }
 
-.string .note.fret-10 {
+.fret-10 {
   flex-grow: 3.14997487879;
 }
 
-.string .note.fret-11 {
+.fret-11 {
   flex-grow: 2.97318037368;
 }
 
-.string .note.fret-12 {
+.fret-12 {
   flex-grow: 2.81;
 }
 
-.string .note.fret-13 {
+.fret-13 {
   flex-grow: 2.65;
 }
 
-.string .note.fret-14 {
+.fret-14 {
   flex-grow: 2.50;
 }
 
-.string .note.fret-15 {
+.fret-15 {
   flex-grow: 2.36;
 }
 
-.string .note.fret-16 {
+.fret-16 {
   flex-grow: 2.23;
 }
 
-.string .note.fret-17 {
+.fret-17 {
   flex-grow: 2.10;
 }
 
-.string .note.fret-18 {
+.fret-18 {
   flex-grow: 1.98;
 }
 
-.string .note.fret-19 {
+.fret-19 {
   flex-grow: 1.87;
 }
 
-.string .note.fret-20 {
+.fret-20 {
   flex-grow: 1.77;
 }
 
-.string .note.fret-21 {
+.fret-21 {
   flex-grow: 1.67;
 }
 
-.string .note.fret-22 {
+.fret-22 {
   flex-grow: 1.57;
 }
 
-.string .note.fret-23 {
+.fret-23 {
   flex-grow: 1.49;
 }
 
-.string.pedal-4 .note.fret-24,
-.string.pedal-2 .note.fret-24,
-.string.pedal-1 .note.fret-24 {
+.string.pedal-4 .fret-24,
+.string.pedal-2 .fret-24,
+.string.pedal-1 .fret-24 {
   flex-grow: 1.4063727259;
 }
 
-.string.pedal-4 .note.fret-25,
-.string.pedal-2 .note.fret-25 {
+.string.pedal-4 .fret-25,
+.string.pedal-2 .fret-25 {
   flex-grow: 1.32743909003;
 }
 
-.string .end {
+.end {
   flex-grow: 25;
   -webkit-transition: flex-grow 1s;
   -moz-transition: flex-grow 1s;
@@ -423,9 +432,10 @@
 
 #scaleNotes, #scaleQualities {
   display: flex;
-  gap: 2px;
+  gap: 3px;
   justify-content: center;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .scale {
