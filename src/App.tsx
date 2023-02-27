@@ -349,9 +349,11 @@ class Board extends React.Component {
     // C: bigger I, IVsus4
     // K: 7, bigger I
     { note: Note.fromNote(Letter.A, Accidental.Natural, 4), adjustments: []},
-    { note: Note.fromNote(Letter.F, Accidental.Natural, 4), adjustments: [{pedal: "C", interval: 2}]},
+    // { note: Note.fromNote(Letter.F, Accidental.Natural, 4), adjustments: [{pedal: "C", interval: 2}]},
+    { note: Note.fromNote(Letter.F, Accidental.Natural, 4), adjustments: []},
     { note: Note.fromNote(Letter.D, Accidental.Natural, 4), adjustments: [{pedal: "C", interval: 2}]},
-    { note: Note.fromNote(Letter.B, Accidental.Natural, 3), adjustments: [{pedal: "K", interval: -1}]},
+    // { note: Note.fromNote(Letter.B, Accidental.Natural, 3), adjustments: [{pedal: "K", interval: -1}]},
+    { note: Note.fromNote(Letter.B, Accidental.Natural, 3), adjustments: [{pedal: "C", interval: 1}]},
     { note: Note.fromNote(Letter.G, Accidental.Natural, 3), adjustments: [{pedal: "A", interval: 2}]},
     { note: Note.fromNote(Letter.E, Accidental.Natural, 3), adjustments: [{pedal: "A", interval: 1}]},
     { note: Note.fromNote(Letter.C, Accidental.Natural, 3), adjustments: [{pedal: "B", interval: 1}]},
